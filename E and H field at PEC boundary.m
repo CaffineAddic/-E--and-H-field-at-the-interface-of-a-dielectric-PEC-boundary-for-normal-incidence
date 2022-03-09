@@ -1,0 +1,1 @@
+u = 3*10^8/(2*sqrt(2));z = linspace(-1,1,1000);t = z./u;       w = zeros(1,1000);b = zeros(1,1000);for i = 1:1000  w(i) = 2*pi./t(i);  b(i) = 2*pi./z(i);  H = (cos(b(i).*z).*cos(w(i).*t))./(60*pi);endforgrid onplot(z, H, 'k')xlabel('Wavelength');ylabel('Value of H-Field');xticks([-1 -0.5 0 0.5 1])xticklabels({'-2λ','-λ','0','λ','2λ'});
